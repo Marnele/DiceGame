@@ -1,20 +1,19 @@
-// The Triathlon Challenge Game is a single player 4-round course advancement game. 
-// First Roll - Player is assigned a sponsor. (worth 0 - 5pts) 
-// Second Roll - Course is revealed (Crossfit, Swim, Bike, Run)
-// Third Roll - Players progress revealed by % of completion. (worth 10-40pts)
-// Fourth Roll - Player rolls to reveal skill level.(worth 5-15pts)
-// Fifth Roll - Player rolls to reveal experience.
-// Sixth Roll - Player rolls for perks and advantages.
-// With the right combination perks and advantages player will complete or fail race.(worth 10-30pts)
-// Player WINS if they have 100+pts 
-
+// // The Triathlon Challenge Game is a single player 4-round course advancement game. 
+// // First Roll - Player is assigned a sponsor. (worth 0 - 5pts) 
+// // Second Roll - Course is revealed (Crossfit, Swim, Bike, Run)
+// // Third Roll - Players progress revealed by % of completion. (worth 10-40pts)
+// // Fourth Roll - Player rolls to reveal skill level.(worth 5-15pts)
+// // Fifth Roll - Player rolls to reveal experience.
+// // Sixth Roll - Player rolls for perks and advantages.
+// // With the right combination perks and advantages player will complete or fail race.(worth 10-30pts)
+// // Player WINS if they have 100+pts 
 let firstRoundRoll;
 let playerSponsor;
 let firstRoundTally = 10;
 firstRound();
    
     function firstRound() {
-        teamSponsors=["Nike", "Adidas", "Reebox", "Under Armour", "New Balance"];
+        teamSponsors=["Nike", "Jordan", "Adidas", "Reebox", "Under Armour", "New Balance"];
         firstRoundRoll = Math.floor(Math.random()*6+1);
         
                 if  (firstRoundRoll == 6) {
@@ -112,7 +111,7 @@ firstRound();
     let playerSkillLevel;
     let fourthRoundRoll;
     let skinInGame;
-    let fourthRoundPoints = (fourthRoundRoll * 2);
+    let fourthRoundPoints = fourthRoundRoll;
     playerSkill();
 
        function playerSkill() {
@@ -143,15 +142,16 @@ firstRound();
        
          // Player rolls to reveal years of experience.
           
-        let fifthRoundPoints = playerExperience()*2;
-        let playerExperienceLevel = playerExperience();
+        let fifthRoundPoints;
+        let playerExperienceLevel = fifthRoundRoll.toString();
         fifthRoundRoll;
-        playerExperience()
+        playerExperience();
 
-            function playerExperience() {
-                let fifthRoundRoll = Math.floor(Math.random()*20+1);
-                return console.log("You rolled:" + " " + fifthRoundRoll + "\n" + "Years of experience:" + " " + playerExperienceLevel + "\n" +
-                "Round 5 Score:" + " " + fifthRoundPoints);
+        function playerExperience() {
+            let fifthRoundRoll = Math.floor(Math.random()*20+1);
+            fifthRoundPoints == fifthRoundRoll;
+            return console.log("You rolled:" + " " + fifthRoundRoll + "\n" + "Years of experience:" + " " + playerExperienceLevel + "\n" +
+            "Round 5 Score:" + " " + x);
           }
 
 
@@ -167,55 +167,52 @@ firstRound();
         
             if (sixthRoundRoll == 10) {
             playerPerk = playerPerkOptions[0].toString();
-            return console.log("You rolled:" + " " + sixthRoundRoll + "\n" + "Your perk:" + " " + playerPerk + "\n"
+            return console.log("You rolled:" + " " + sixthRoundRoll + "\n" + "Your perk:" + " " + playerPerk + "\n" +
             "Round 6 Score:" + " " + sixthRoundPoints);
         }
         else if (sixthRoundRoll == 9) {
             playerPerk = playerPerkOptions[1].toString();
-            return console.log("You rolled:" + " " + sixthRoundRoll + "\n" + "Your perk:" + " " + playerPerk + "\n"
+            return console.log("You rolled:" + " " + sixthRoundRoll + "\n" + "Your perk:" + " " + playerPerk + "\n" +
             "Round 6 Score:" + " " + sixthRoundPoints);
         }
         else if (sixthRoundRoll == 8) {
             playerPerk = playerPerkOptions[2].toString();
-            return console.log("You rolled:" + " " + sixthRoundRoll + "\n" + "Your perk:" + " " + playerPerk + "\n"
+            return console.log("You rolled:" + " " + sixthRoundRoll + "\n" + "Your perk:" + " " + playerPerk + "\n" +
             "Round 6 Score:" + " " + sixthRoundPoints);
         }
         else if (sixthRoundRoll == 7) {
             playerPerk = playerPerkOptions[3].toString();
-            return console.log("You rolled:" + " " + sixthRoundRoll + "\n" + "Your perk:" + " " + playerPerk + "\n"
+            return console.log("You rolled:" + " " + sixthRoundRoll + "\n" + "Your perk:" + " " + playerPerk + "\n" +
             "Round 6 Score:" + " " + sixthRoundPoints);
         }
         else if (sixthRoundRoll == 6) {
             playerPerk = playerPerkOptions[4].toString();
-            return console.log("You rolled:" + " " + sixthRoundRoll + "\n" + "Your perk:" + " " + playerPerk + "\n"
+            return console.log("You rolled:" + " " + sixthRoundRoll + "\n" + "Your perk:" + " " + playerPerk + "\n" +
             "Round 6 Score:" + " " + sixthRoundPoints);
         }
         else if (sixthRoundRoll == 5) {
             playerPerk = playerPerkOptions[5].toString();
-            return console.log("You rolled:" + " " + sixthRoundRoll + "\n" + "Your perk:" + " " + playerPerk + "\n"
+            return console.log("You rolled:" + " " + sixthRoundRoll + "\n" + "Your perk:" + " " + playerPerk + "\n" +
             "Round 6 Score:" + " " + sixthRoundPoints);
         }
         else if (sixthRoundRoll == 4) {
             playerPerk = playerPerkOptions[6].toString();
-            return console.log("You rolled:" + " " + sixthRoundRoll + "\n" + "Your perk:" + " " + playerPerk + "\n"
+            return console.log("You rolled:" + " " + sixthRoundRoll + "\n" + "Your perk:" + " " + playerPerk + "\n" +
             "Round 6 Score:" + " " + sixthRoundPoints);
         }
         else if (sixthRoundRoll == 3) {
             playerPerk = playerPerkOptions[7].toString();
-            return console.log("You rolled:" + " " + sixthRoundRoll + "\n" + "Your perk:" + " " + playerPerk + "\n"
+            return console.log("You rolled:" + " " + sixthRoundRoll + "\n" + "Your perk:" + " " + playerPerk + "\n" +
             "Round 6 Score:" + " " + sixthRoundPoints);
         }
         else if (sixthRoundRoll == 2) {
             playerPerk = playerPerkOptions[8].toString();
-            return console.log("You rolled:" + " " + sixthRoundRoll + "\n" + "Your perk:" + " " + playerPerk + "\n"
+            return console.log("You rolled:" + " " + sixthRoundRoll + "\n" + "Your perk:" + " " + playerPerk + "\n" +
             "Round 6 Score:" + " " + sixthRoundPoints);
         }
         else if (sixthRoundRoll == 1) {
             playerPerk = playerPerkOptions[9].toString();
-            return console.log("You rolled:" + " " + sixthRoundRoll + "\n" + "Your perk:" + " " + playerPerk + "\n"
+            return console.log("You rolled:" + " " + sixthRoundRoll + "\n" + "Your perk:" + " " + playerPerk + "\n" +
             "Round 6 Score:" + " " + sixthRoundPoints);
         }
     }
-
-// Create function to run game.
-// Create function to Tally Points and give a final report.
